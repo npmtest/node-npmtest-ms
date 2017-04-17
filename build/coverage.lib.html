@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-ms/ms/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-ms/node_modules/ms/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-ms">npmtest-ms (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-ms/ms/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-ms/node_modules/ms/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">20.83% <small>(10 / 48)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-ms/ms/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-ms/node_modules/ms/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -542,15 +544,15 @@ var y = d * 365.25;
  * @api public
  */
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function(val, options) {</span>
-<span class="cstat-no" title="statement not covered">  options = options || {};</span>
-<span class="cstat-no" title="statement not covered">  var type = typeof val;</span>
-<span class="cstat-no" title="statement not covered">  if (type === 'string' &amp;&amp; val.length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">    return parse(val);</span>
-  } else <span class="cstat-no" title="statement not covered">if (type === 'number' &amp;&amp; isNaN(val) === false) {</span>
-<span class="cstat-no" title="statement not covered">    return options.long ? fmtLong(val) : fmtShort(val);</span>
+module.exports = <span class="fstat-no" title="function not covered" >function(val, options) {</span>
+<span class="cstat-no" title="statement not covered" >  options = options || {};</span>
+<span class="cstat-no" title="statement not covered" >  var type = typeof val;</span>
+<span class="cstat-no" title="statement not covered" >  if (type === 'string' &amp;&amp; val.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >    return parse(val);</span>
+  } else <span class="cstat-no" title="statement not covered" >if (type === 'number' &amp;&amp; isNaN(val) === false) {</span>
+<span class="cstat-no" title="statement not covered" >    return options.long ? fmtLong(val) : fmtShort(val);</span>
   }
-<span class="cstat-no" title="statement not covered">  throw new Error(</span>
+<span class="cstat-no" title="statement not covered" >  throw new Error(</span>
     'val is not a non-empty string or a valid number. val=' +
       JSON.stringify(val)
   );
@@ -564,56 +566,56 @@ module.exports = <span class="fstat-no" title="function not covered">function(va
  * @api private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function parse(str) {</span>
-<span class="cstat-no" title="statement not covered">  str = String(str);</span>
-<span class="cstat-no" title="statement not covered">  if (str.length &gt; 10000) {</span>
-<span class="cstat-no" title="statement not covered">    return;</span>
+<span class="fstat-no" title="function not covered" >function parse(str) {</span>
+<span class="cstat-no" title="statement not covered" >  str = String(str);</span>
+<span class="cstat-no" title="statement not covered" >  if (str.length &gt; 10000) {</span>
+<span class="cstat-no" title="statement not covered" >    return;</span>
   }
-<span class="cstat-no" title="statement not covered">  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(</span>
+<span class="cstat-no" title="statement not covered" >  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(</span>
     str
   );
-<span class="cstat-no" title="statement not covered">  if (!match) {</span>
-<span class="cstat-no" title="statement not covered">    return;</span>
+<span class="cstat-no" title="statement not covered" >  if (!match) {</span>
+<span class="cstat-no" title="statement not covered" >    return;</span>
   }
-<span class="cstat-no" title="statement not covered">  var n = parseFloat(match[1]);</span>
-<span class="cstat-no" title="statement not covered">  var type = (match[2] || 'ms').toLowerCase();</span>
-<span class="cstat-no" title="statement not covered">  switch (type) {</span>
+<span class="cstat-no" title="statement not covered" >  var n = parseFloat(match[1]);</span>
+<span class="cstat-no" title="statement not covered" >  var type = (match[2] || 'ms').toLowerCase();</span>
+<span class="cstat-no" title="statement not covered" >  switch (type) {</span>
     case 'years':
     case 'year':
     case 'yrs':
     case 'yr':
     case 'y':
-<span class="cstat-no" title="statement not covered">      return n * y;</span>
+<span class="cstat-no" title="statement not covered" >      return n * y;</span>
     case 'days':
     case 'day':
     case 'd':
-<span class="cstat-no" title="statement not covered">      return n * d;</span>
+<span class="cstat-no" title="statement not covered" >      return n * d;</span>
     case 'hours':
     case 'hour':
     case 'hrs':
     case 'hr':
     case 'h':
-<span class="cstat-no" title="statement not covered">      return n * h;</span>
+<span class="cstat-no" title="statement not covered" >      return n * h;</span>
     case 'minutes':
     case 'minute':
     case 'mins':
     case 'min':
     case 'm':
-<span class="cstat-no" title="statement not covered">      return n * m;</span>
+<span class="cstat-no" title="statement not covered" >      return n * m;</span>
     case 'seconds':
     case 'second':
     case 'secs':
     case 'sec':
     case 's':
-<span class="cstat-no" title="statement not covered">      return n * s;</span>
+<span class="cstat-no" title="statement not covered" >      return n * s;</span>
     case 'milliseconds':
     case 'millisecond':
     case 'msecs':
     case 'msec':
     case 'ms':
-<span class="cstat-no" title="statement not covered">      return n;</span>
+<span class="cstat-no" title="statement not covered" >      return n;</span>
     default:
-<span class="cstat-no" title="statement not covered">      return undefined;</span>
+<span class="cstat-no" title="statement not covered" >      return undefined;</span>
   }
 }
 &nbsp;
@@ -625,20 +627,20 @@ module.exports = <span class="fstat-no" title="function not covered">function(va
  * @api private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function fmtShort(ms) {</span>
-<span class="cstat-no" title="statement not covered">  if (ms &gt;= d) {</span>
-<span class="cstat-no" title="statement not covered">    return Math.round(ms / d) + 'd';</span>
+<span class="fstat-no" title="function not covered" >function fmtShort(ms) {</span>
+<span class="cstat-no" title="statement not covered" >  if (ms &gt;= d) {</span>
+<span class="cstat-no" title="statement not covered" >    return Math.round(ms / d) + 'd';</span>
   }
-<span class="cstat-no" title="statement not covered">  if (ms &gt;= h) {</span>
-<span class="cstat-no" title="statement not covered">    return Math.round(ms / h) + 'h';</span>
+<span class="cstat-no" title="statement not covered" >  if (ms &gt;= h) {</span>
+<span class="cstat-no" title="statement not covered" >    return Math.round(ms / h) + 'h';</span>
   }
-<span class="cstat-no" title="statement not covered">  if (ms &gt;= m) {</span>
-<span class="cstat-no" title="statement not covered">    return Math.round(ms / m) + 'm';</span>
+<span class="cstat-no" title="statement not covered" >  if (ms &gt;= m) {</span>
+<span class="cstat-no" title="statement not covered" >    return Math.round(ms / m) + 'm';</span>
   }
-<span class="cstat-no" title="statement not covered">  if (ms &gt;= s) {</span>
-<span class="cstat-no" title="statement not covered">    return Math.round(ms / s) + 's';</span>
+<span class="cstat-no" title="statement not covered" >  if (ms &gt;= s) {</span>
+<span class="cstat-no" title="statement not covered" >    return Math.round(ms / s) + 's';</span>
   }
-<span class="cstat-no" title="statement not covered">  return ms + 'ms';</span>
+<span class="cstat-no" title="statement not covered" >  return ms + 'ms';</span>
 }
 &nbsp;
 /**
@@ -649,8 +651,8 @@ module.exports = <span class="fstat-no" title="function not covered">function(va
  * @api private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function fmtLong(ms) {</span>
-<span class="cstat-no" title="statement not covered">  return plural(ms, d, 'day') ||</span>
+<span class="fstat-no" title="function not covered" >function fmtLong(ms) {</span>
+<span class="cstat-no" title="statement not covered" >  return plural(ms, d, 'day') ||</span>
     plural(ms, h, 'hour') ||
     plural(ms, m, 'minute') ||
     plural(ms, s, 'second') ||
@@ -661,22 +663,21 @@ module.exports = <span class="fstat-no" title="function not covered">function(va
  * Pluralization helper.
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function plural(ms, n, name) {</span>
-<span class="cstat-no" title="statement not covered">  if (ms &lt; n) {</span>
-<span class="cstat-no" title="statement not covered">    return;</span>
+<span class="fstat-no" title="function not covered" >function plural(ms, n, name) {</span>
+<span class="cstat-no" title="statement not covered" >  if (ms &lt; n) {</span>
+<span class="cstat-no" title="statement not covered" >    return;</span>
   }
-<span class="cstat-no" title="statement not covered">  if (ms &lt; n * 1.5) {</span>
-<span class="cstat-no" title="statement not covered">    return Math.floor(ms / n) + ' ' + name;</span>
+<span class="cstat-no" title="statement not covered" >  if (ms &lt; n * 1.5) {</span>
+<span class="cstat-no" title="statement not covered" >    return Math.floor(ms / n) + ' ' + name;</span>
   }
-<span class="cstat-no" title="statement not covered">  return Math.ceil(ms / n) + ' ' + name + 's';</span>
+<span class="cstat-no" title="statement not covered" >  return Math.ceil(ms / n) + ' ' + name + 's';</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 09:56:41 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 11:58:57 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
