@@ -1,6 +1,6 @@
 # npmtest-ms
 
-#### test coverage for  [ms (v1.0.0)](https://github.com/zeit/ms#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-ms.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ms) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ms.svg)](https://travis-ci.org/npmtest/node-npmtest-ms)
+#### basic test coverage for  [ms (v1.0.0)](https://github.com/zeit/ms#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-ms.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ms) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ms.svg)](https://travis-ci.org/npmtest/node-npmtest-ms)
 
 #### Tiny milisecond conversion utility
 
